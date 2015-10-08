@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -16,52 +17,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T6V-68-nau">
-                                <rect key="frame" x="0.0" y="423" width="600" height="128"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-FX-hA6">
-                                <rect key="frame" x="233" y="128" width="135" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sandbox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNI-hh-yOq">
+                                <rect key="frame" x="99" y="94" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-FX-hA6">
+                                <rect key="frame" x="121" y="128" width="135" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwF-z9-jLm">
-                                        <rect key="frame" x="49" y="0.0" width="38" height="30"/>
+                                        <rect key="frame" x="48" y="0.0" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="LoginButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="UNt-S3-umy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06j-aK-cSn">
                                         <rect key="frame" x="0.0" y="30" width="135" height="30"/>
                                         <state key="normal" title="Clear Cached Login"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-SU-oX5">
-                                        <rect key="frame" x="13" y="60" width="110" height="30"/>
+                                        <rect key="frame" x="12" y="60" width="110" height="30"/>
                                         <state key="normal" title="Switch Sandbox"/>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="XDKS.1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiD-Ew-wym">
-                                <rect key="frame" x="266" y="90" width="68" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="XDKS.1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiD-Ew-wym">
+                                <rect key="frame" x="174" y="90" width="68" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sandbox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNI-hh-yOq">
-                                <rect key="frame" x="191" y="94" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T6V-68-nau">
+                                <rect key="frame" x="0.0" y="423" width="600" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="kvK-bu-OMe"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8i3-Ea-agO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="362"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Kce-wc-jOl"/>
+                                </constraints>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e9J-FX-hA6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="2af-Us-3fz"/>
                             <constraint firstItem="e9J-FX-hA6" firstAttribute="top" secondItem="qiD-Ew-wym" secondAttribute="bottom" constant="8" id="3Gl-sM-jdg"/>
                             <constraint firstItem="qiD-Ew-wym" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="70" id="9aJ-iV-s49"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="T6V-68-nau" secondAttribute="bottom" id="CXD-oZ-E8C"/>
                             <constraint firstItem="qiD-Ew-wym" firstAttribute="centerY" secondItem="jNI-hh-yOq" secondAttribute="centerY" id="ENj-E9-iqF"/>
+                            <constraint firstItem="T6V-68-nau" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="GZD-ZH-3Ab"/>
+                            <constraint firstItem="T6V-68-nau" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="aBY-LF-xX4"/>
+                            <constraint firstItem="8i3-Ea-agO" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="g54-qM-VDN"/>
                             <constraint firstItem="qiD-Ew-wym" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="lu4-9a-ZTw"/>
+                            <constraint firstItem="8i3-Ea-agO" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="n6o-cO-R6j"/>
+                            <constraint firstItem="8i3-Ea-agO" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="rZC-vO-2Tf"/>
                             <constraint firstItem="qiD-Ew-wym" firstAttribute="leading" secondItem="jNI-hh-yOq" secondAttribute="trailing" constant="8" id="zKf-xn-oS4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mWebView" destination="8i3-Ea-agO" id="U4P-o1-sqP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@
 		57823C9D1BC5E5550027D0B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57823C9B1BC5E5550027D0B8 /* Main.storyboard */; };
 		57823C9F1BC5E5550027D0B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57823C9E1BC5E5550027D0B8 /* Assets.xcassets */; };
 		57823CA21BC5E5550027D0B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */; };
+		57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CA91BC620D10027D0B8 /* LiveAuthManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		57823C9E1BC5E5550027D0B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57823CA11BC5E5550027D0B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57823CA31BC5E5550027D0B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57823CA91BC620D10027D0B8 /* LiveAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthManager.m; sourceTree = "<group>"; };
+		57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveAuthManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				57823C981BC5E5550027D0B8 /* SecondViewController.h */,
 				57823C991BC5E5550027D0B8 /* SecondViewController.m */,
 				57823C9B1BC5E5550027D0B8 /* Main.storyboard */,
+				57823CA91BC620D10027D0B8 /* LiveAuthManager.m */,
+				57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */,
 				57823C9E1BC5E5550027D0B8 /* Assets.xcassets */,
 				57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */,
 				57823CA31BC5E5550027D0B8 /* Info.plist */,
@@ -156,6 +161,7 @@
 			files = (
 				57823C9A1BC5E5550027D0B8 /* SecondViewController.m in Sources */,
 				57823C941BC5E5550027D0B8 /* AppDelegate.m in Sources */,
+				57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */,
 				57823C971BC5E5550027D0B8 /* FirstViewController.m in Sources */,
 				57823C911BC5E5550027D0B8 /* main.m in Sources */,
 			);
@@ -306,6 +312,7 @@
 				57823CA81BC5E5550027D0B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
