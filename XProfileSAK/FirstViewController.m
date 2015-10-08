@@ -26,12 +26,14 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     mWebView.hidden = TRUE;
+    mWebView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)LoginButton:(id)sender {
     mWebView.hidden = FALSE;
     
@@ -45,6 +47,21 @@
 
     }];
 
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    BOOL complete = [[LiveAuthManager GetInstance] CheckLoadCompleted:webView];
+    
+    if (complete)
+    {
+        [UIView animateWithDuration:0.5f animations:^{
+            [mWebView setAlpha:0.0f];
+        } completion:^(BOOL inFinished){
+            mWebView.hidden = TRUE;
+            mWebView.delegate = NULL;
+        }];
+    }
 }
 
 @end

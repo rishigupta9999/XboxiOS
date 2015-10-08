@@ -6,6 +6,8 @@
 //  Copyright © 2015 Neon Games. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @class UIWebView;
 
 typedef enum
@@ -36,5 +38,6 @@ typedef enum
 -(instancetype)InternalInit;
 
 -(void)SignInWithWebView:(UIWebView*)inWebView;
+-(BOOL)CheckLoadCompleted:(UIWebView*)inWebView;
 
 @end

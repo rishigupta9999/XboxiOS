@@ -51,9 +51,26 @@ static LiveAuthManager* sInstance = NULL;
 
 -(void)SignInWithWebView:(UIWebView*)inWebView
 {
-    NSURL* nsUrl = [NSURL URLWithString:OAUTH_SIGNIN_URL];
+    NSURL* nsUrl = [NSURL URLWithString:(NSString*)OAUTH_SIGNIN_URL];
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     [inWebView loadRequest:request];
+}
+
+-(BOOL)CheckLoadCompleted:(UIWebView*)inWebView
+{
+    NSURL* url = inWebView.request.mainDocumentURL;
+    
+    NSArray* pathComponents = [url pathComponents];
+    
+    for (NSString* curString in pathComponents)
+    {
+        if ([curString caseInsensitiveCompare:(NSString*)OAUTH_SIGNIN_COMPLETION_PAGE] == NSOrderedSame)
+        {
+            return TRUE;
+        }
+    }
+    
+    return FALSE;
 }
 
 @end
