@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "LiveAuthManager.h"
-
-@implementation LiveAuthManager
+#import <UIKit/UIWebView.h>
 
 const NSString* CLIENT_ID = @"000000004812FA70";
 const NSString* CLIENT_SECRET = @"WY9o8+UrYvaDhNf0Zj2J5tOLo6KRU/Cg";
-      NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=%@&scope=Xboxlive.signin%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
+const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=000000004812FA70&scope=Xboxlive.signin%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
 const NSString* OAUTH_SIGNOUT_URL = @"https://login.live.com/oauth20_logout.srf";
 const NSString* OAUTH_GETTOKEN_URL = @"https://login.live.com/oauth20_token.srf";
       NSString* OAUTH_GETTOKEN_CONTENT = @"client_id=%@&redirect_uri=https://login.live.com/oauth20_desktop.srf&client_secret=%@&grant_type=authorization_code";
@@ -21,6 +20,7 @@ const NSString* OAUTH_GETTOKEN_URL = @"https://login.live.com/oauth20_token.srf"
 const NSString* OAUTH_SIGNOUT_PAGE = @"oauth20_logout.srf";
 const NSString* OAUTH_SIGNIN_COMPLETION_PAGE = @"oauth20_desktop.srf";
 
+@implementation LiveAuthManager
 
 static LiveAuthManager* sInstance = NULL;
 
@@ -40,10 +40,20 @@ static LiveAuthManager* sInstance = NULL;
 {
     mRefreshToken = 0;
     mTokenExpiryTime = 0;
-    
+    mMSAToken = [[NSString alloc] init];
+    mTokenValid = FALSE;
+    mLastError = [[NSString alloc] init];
+
     mLoginState = ELoginStateNone;
     
     return self;
+}
+
+-(void)SignInWithWebView:(UIWebView*)inWebView
+{
+    NSURL* nsUrl = [NSURL URLWithString:OAUTH_SIGNIN_URL];
+    NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
+    [inWebView loadRequest:request];
 }
 
 @end

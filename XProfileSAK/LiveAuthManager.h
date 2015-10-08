@@ -6,6 +6,8 @@
 //  Copyright © 2015 Neon Games. All rights reserved.
 //
 
+@class UIWebView;
+
 typedef enum
 {
     ELoginStateNone,
@@ -32,5 +34,7 @@ typedef enum
 +(LiveAuthManager*)GetInstance;
 
 -(instancetype)InternalInit;
+
+-(void)SignInWithWebView:(UIWebView*)inWebView;
 
 @end

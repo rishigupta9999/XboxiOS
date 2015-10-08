@@ -7,8 +7,8 @@
 //
 
 #import "FirstViewController.h"
-
-
+#import "LiveAuthManager.h"
+#import <UIKit/UIView.h>
 
 @interface FirstViewController ()
 
@@ -33,7 +33,18 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)LoginButton:(id)sender {
-    NSLog(@"Foo");
+    mWebView.hidden = FALSE;
+    
+    [[LiveAuthManager GetInstance] SignInWithWebView:mWebView];
+    
+    [mWebView setAlpha:0];
+
+    [UIView animateWithDuration:0.5f animations:^{
+
+        [mWebView setAlpha:1.0f];
+
+    }];
+
 }
 
 @end
