@@ -28,8 +28,16 @@
     
     if (gamerTag != NULL)
     {
-        viewController.mGamertag.text = [XSTSAuthManager GetInstance].mGamertag;
+        viewController.mGamertag.text = gamerTag;
     }
+    
+    NSString* xuid = [XSTSAuthManager GetInstance].mXUID;
+    
+    if (xuid != NULL)
+    {
+        viewController.mXUID.text = xuid;
+    }
+
 }
 
 @end
