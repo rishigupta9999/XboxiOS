@@ -9,10 +9,12 @@
 #import "FirstViewController.h"
 #import "LiveAuthManager.h"
 #import <UIKit/UIView.h>
+#import "AppDelegate.h"
 
 @interface FirstViewController ()
 
 @property (weak, nonatomic) IBOutlet UIWebView* mWebView;
+@property (weak, nonatomic) IBOutlet UITextView *mTextView;
 
 @end
 
@@ -20,6 +22,7 @@
 @implementation FirstViewController
 
 @synthesize mWebView = mWebView;
+@synthesize mTextView = mTextView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +30,10 @@
     
     mWebView.hidden = TRUE;
     mWebView.delegate = self;
+    
+    mTextView.editable = FALSE;
+    
+    GetAppDelegate().textView = mTextView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +66,7 @@
        [storage deleteCookie:cookie];
     }
 
+    [GetAppDelegate() AddText:@"Cookies Cleared"];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView

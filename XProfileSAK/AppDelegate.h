@@ -10,9 +10,14 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
+    NSString* mTextViewString;
+    UIView* mTextView;
 }
 
+-(void)AddText:(NSString*)inText;
+
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UITextView* textView;
 
 
 @end

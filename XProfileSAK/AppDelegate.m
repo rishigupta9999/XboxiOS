@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     
     [LiveAuthManager init];
+    mTextViewString = [[NSString alloc] init];
     return YES;
 }
 
@@ -43,6 +44,19 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)AddText:(NSString*)inText
+{
+    mTextViewString = [NSString stringWithFormat:@"%@\n\n%@", mTextViewString, inText];
+    
+    self.textView.text = mTextViewString;
+    
+    NSRange range = NSMakeRange(self.textView.text.length, 0);
+    [self.textView scrollRangeToVisible:range];
+    [self.textView setScrollEnabled:NO];
+    [self.textView setScrollEnabled:YES];
+
 }
 
 @end

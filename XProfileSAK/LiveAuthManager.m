@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LiveAuthManager.h"
 #import <UIKit/UIWebView.h>
+#import "AppDelegate.h"
 
 const NSString* CLIENT_ID = @"000000004812FA70";
 const NSString* CLIENT_SECRET = @"WY9o8+UrYvaDhNf0Zj2J5tOLo6KRU/Cg";
@@ -65,9 +66,9 @@ static LiveAuthManager* sInstance = NULL;
     
     NSArray* pathComponents = [url pathComponents];
     
-    NSLog(@"URL = %@, Query = %@", url, url.query);
-    
     NSString* authCode = NULL;
+    
+    [GetAppDelegate() AddText:[NSString stringWithFormat:@"%@ loaded", url]];
     
     for (NSString* curString in pathComponents)
     {
@@ -139,6 +140,12 @@ static LiveAuthManager* sInstance = NULL;
         mTokenExpiryTime = [NSDate dateWithTimeIntervalSinceNow:[expiryDuration floatValue]];
 
         mTokenValid = TRUE;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got RPS ticket %@", mMSAToken]];
+            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Expires in %@", expiryDuration]];
+        });
+
       }] resume];
 }
 
