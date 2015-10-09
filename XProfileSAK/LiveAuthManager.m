@@ -120,7 +120,6 @@ static LiveAuthManager* sInstance = NULL;
     components.queryItems = @[clientId, redirectURI, code, clientSecret, grantType];
     
     NSURL* queryURL = components.URL;
-    NSLog(@"Query url %@", queryURL);
 
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:queryURL];
     

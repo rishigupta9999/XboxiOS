@@ -36,6 +36,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06j-aK-cSn">
                                         <rect key="frame" x="0.0" y="30" width="135" height="30"/>
                                         <state key="normal" title="Clear Cached Login"/>
+                                        <connections>
+                                            <action selector="ClearCachedLoginButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qle-hR-3yB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-SU-oX5">
                                         <rect key="frame" x="12" y="60" width="110" height="30"/>

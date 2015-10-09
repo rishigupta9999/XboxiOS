@@ -49,6 +49,18 @@
 
 }
 
+- (IBAction)ClearCachedLoginButton:(id)sender
+{
+
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]) 
+    {
+       [storage deleteCookie:cookie];
+    }
+
+}
+
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     BOOL complete = [[LiveAuthManager GetInstance] CheckLoadCompleted:webView];
