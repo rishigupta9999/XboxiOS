@@ -77,7 +77,7 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
         mUToken = [xasuResponse objectForKey:@"Token"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got UToken %@", mUToken]];
+            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got UToken, expires %@", [xasuResponse objectForKey:@"NotAfter"]]];
         });
         
         NSURL* queryURL = [NSURL URLWithString:(NSString*)XTOKEN_ENDPOINT];
@@ -118,8 +118,8 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
             mXUID = [xui[0] objectForKey:@"xid"];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got XToken %@", mXToken]];
-                [GetAppDelegate() UserLoggedIn];
+                [GetAppDelegate() AddText:@"Got XToken"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"User logged in" object:NULL];
             });
 
         }] resume];

@@ -22,11 +22,24 @@
     
     self.mGamertag.text = [XSTSAuthManager GetInstance].mGamertag;
     self.mXUID.text = [XSTSAuthManager GetInstance].mXUID;
+    
+    mCenter = [NSNotificationCenter defaultCenter];
+    [mCenter addObserver:self selector:@selector(EventReceived:) name:NULL object:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)EventReceived:(NSNotification *)inNotification
+{
+    if ([[inNotification name] caseInsensitiveCompare:@"User Logged In"] == NSOrderedSame)
+    {
+        self.mGamertag.text = [XSTSAuthManager GetInstance].mGamertag;
+        self.mXUID.text = [XSTSAuthManager GetInstance].mXUID;
+    }
 }
 
 @end

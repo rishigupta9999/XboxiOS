@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-FX-hA6">
-                                <rect key="frame" x="121" y="128" width="135" height="90"/>
+                                <rect key="frame" x="121" y="128" width="135" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwF-z9-jLm">
                                         <rect key="frame" x="48" y="0.0" width="38" height="30"/>
@@ -39,10 +39,6 @@
                                         <connections>
                                             <action selector="ClearCachedLoginButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qle-hR-3yB"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-SU-oX5">
-                                        <rect key="frame" x="12" y="60" width="110" height="30"/>
-                                        <state key="normal" title="Switch Sandbox"/>
                                     </button>
                                 </subviews>
                             </stackView>

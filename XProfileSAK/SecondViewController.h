@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+{
+    NSNotificationCenter* mCenter;
+}
+
+- (void)EventReceived:(NSNotification *)inNotification;
+
 @property (weak, nonatomic) IBOutlet UILabel *mGamertag;
 @property (weak, nonatomic) IBOutlet UILabel *mXUID;
 

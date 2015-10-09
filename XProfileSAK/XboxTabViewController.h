@@ -12,6 +12,4 @@
 {
 }
 
--(void)UserLoggedIn;
-
 @end

@@ -80,7 +80,7 @@ static LiveAuthManager* sInstance = NULL;
     
     NSString* authCode = NULL;
     
-    [GetAppDelegate() AddText:[NSString stringWithFormat:@"%@ loaded", url]];
+    [GetAppDelegate() AddText:@"Page loaded"];
     
     for (NSString* curString in pathComponents)
     {
@@ -156,8 +156,7 @@ static LiveAuthManager* sInstance = NULL;
         [[XSTSAuthManager GetInstance] GetXTokenForSandbox:mSandbox];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got RPS ticket %@", mMSAToken]];
-            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Expires in %@", expiryDuration]];
+            [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got RPS Ticket, expires in %@", expiryDuration]];
         });
 
       }] resume];

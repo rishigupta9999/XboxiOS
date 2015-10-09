@@ -62,9 +62,4 @@
 
 }
 
--(void)UserLoggedIn
-{
-    [self.tabBarController UserLoggedIn];
-}
-
 @end

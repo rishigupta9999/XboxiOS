@@ -16,7 +16,6 @@
 }
 
 -(void)AddText:(NSString*)inText;
--(void)UserLoggedIn;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITextView* textView;

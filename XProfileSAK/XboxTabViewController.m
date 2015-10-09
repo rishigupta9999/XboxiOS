@@ -20,24 +20,4 @@
     GetAppDelegate().tabBarController = self;
 }
 
--(void)UserLoggedIn
-{
-    SecondViewController* viewController = self.viewControllers[1];
-    
-    NSString* gamerTag = [XSTSAuthManager GetInstance].mGamertag;
-    
-    if (gamerTag != NULL)
-    {
-        viewController.mGamertag.text = gamerTag;
-    }
-    
-    NSString* xuid = [XSTSAuthManager GetInstance].mXUID;
-    
-    if (xuid != NULL)
-    {
-        viewController.mXUID.text = xuid;
-    }
-
-}
-
 @end
