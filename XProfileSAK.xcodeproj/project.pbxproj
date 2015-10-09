@@ -15,6 +15,7 @@
 		57823C9F1BC5E5550027D0B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57823C9E1BC5E5550027D0B8 /* Assets.xcassets */; };
 		57823CA21BC5E5550027D0B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */; };
 		57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CA91BC620D10027D0B8 /* LiveAuthManager.m */; settings = {ASSET_TAGS = (); }; };
+		57823CB21BC752D00027D0B8 /* XSTSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		57823CA91BC620D10027D0B8 /* LiveAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthManager.m; sourceTree = "<group>"; };
 		57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveAuthManager.h; sourceTree = "<group>"; };
 		57823CB01BC74B200027D0B8 /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.h; sourceTree = "<group>"; };
+		57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSTSAuthManager.m; sourceTree = "<group>"; };
+		57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTSAuthManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				57823C9B1BC5E5550027D0B8 /* Main.storyboard */,
 				57823CA91BC620D10027D0B8 /* LiveAuthManager.m */,
 				57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */,
+				57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */,
+				57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */,
 				57823C9E1BC5E5550027D0B8 /* Assets.xcassets */,
 				57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */,
 				57823CA31BC5E5550027D0B8 /* Info.plist */,
@@ -166,6 +171,7 @@
 				57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */,
 				57823C971BC5E5550027D0B8 /* FirstViewController.m in Sources */,
 				57823C911BC5E5550027D0B8 /* main.m in Sources */,
+				57823CB21BC752D00027D0B8 /* XSTSAuthManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

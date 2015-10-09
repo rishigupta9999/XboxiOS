@@ -10,10 +10,11 @@
 #import "LiveAuthManager.h"
 #import <UIKit/UIWebView.h>
 #import "AppDelegate.h"
+#import "XSTSAuthManager.h"
 
-const NSString* CLIENT_ID = @"000000004812FA70";
-const NSString* CLIENT_SECRET = @"WY9o8+UrYvaDhNf0Zj2J5tOLo6KRU/Cg";
-const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=000000004812FA70&scope=Xboxlive.signin%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
+const NSString* CLIENT_ID = @"0000000044165E79";
+const NSString* CLIENT_SECRET = @"kCJGy2k0RnR31CHZJU7K0srszoA4hNnK";
+const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=0000000044165E79&scope=Xboxlive.signin%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
 
 const NSString* REDIRECT_URI = @"https://login.live.com/oauth20_desktop.srf";
 
@@ -29,6 +30,7 @@ const NSString* OAUTH_SIGNIN_COMPLETION_PAGE = @"oauth20_desktop.srf";
 static LiveAuthManager* sInstance = NULL;
 
 @synthesize mLoginState = mLoginState;
+@synthesize mMSAToken = mMSAToken;
 
 +(void)init
 {
@@ -140,6 +142,8 @@ static LiveAuthManager* sInstance = NULL;
         mTokenExpiryTime = [NSDate dateWithTimeIntervalSinceNow:[expiryDuration floatValue]];
 
         mTokenValid = TRUE;
+        
+        [[XSTSAuthManager GetInstance] GetXToken];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got RPS ticket %@", mMSAToken]];

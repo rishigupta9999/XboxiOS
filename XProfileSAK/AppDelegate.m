@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LiveAuthManager.h"
+#import "XSTSAuthManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
     // Override point for customization after application launch.
     
     [LiveAuthManager init];
+    [XSTSAuthManager init];
+    
     mTextViewString = [[NSString alloc] init];
     return YES;
 }

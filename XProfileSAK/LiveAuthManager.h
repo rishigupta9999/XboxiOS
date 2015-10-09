@@ -25,12 +25,12 @@ typedef enum
 {
     NSString*   mRefreshToken;
     NSDate*     mTokenExpiryTime;
-    NSString*   mMSAToken;
     BOOL        mTokenValid;
     NSString*   mLastError;
 }
 
 @property ELoginState mLoginState;
+@property NSString* mMSAToken;
 
 +(void)init;
 +(LiveAuthManager*)GetInstance;
