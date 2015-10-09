@@ -14,6 +14,9 @@
     NSString* mXToken;
 }
 
+@property NSString* mGamertag;
+@property NSString* mXUID;
+
 +(void)init;
 +(XSTSAuthManager*)GetInstance;
 

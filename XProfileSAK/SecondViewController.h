@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *mGamertag;
+@property (weak, nonatomic) IBOutlet UILabel *mXUID;
 
 
 @end

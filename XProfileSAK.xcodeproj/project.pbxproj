@@ -16,10 +16,11 @@
 		57823CA21BC5E5550027D0B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */; };
 		57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CA91BC620D10027D0B8 /* LiveAuthManager.m */; settings = {ASSET_TAGS = (); }; };
 		57823CB21BC752D00027D0B8 /* XSTSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */; settings = {ASSET_TAGS = (); }; };
+		57823CB61BC7A7050027D0B8 /* XboxTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57823C8C1BC5E5550027D0B8 /* XProfileSAK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XProfileSAK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57823C8C1BC5E5550027D0B8 /* RishiXbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RishiXbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57823C901BC5E5550027D0B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57823C921BC5E5550027D0B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57823C931BC5E5550027D0B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +37,8 @@
 		57823CB01BC74B200027D0B8 /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.h; sourceTree = "<group>"; };
 		57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSTSAuthManager.m; sourceTree = "<group>"; };
 		57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTSAuthManager.h; sourceTree = "<group>"; };
+		57823CB41BC7A7050027D0B8 /* XboxTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxTabViewController.h; sourceTree = "<group>"; };
+		57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxTabViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +64,7 @@
 		57823C8D1BC5E5550027D0B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57823C8C1BC5E5550027D0B8 /* XProfileSAK.app */,
+				57823C8C1BC5E5550027D0B8 /* RishiXbox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +79,8 @@
 				57823C981BC5E5550027D0B8 /* SecondViewController.h */,
 				57823C991BC5E5550027D0B8 /* SecondViewController.m */,
 				57823C9B1BC5E5550027D0B8 /* Main.storyboard */,
+				57823CB41BC7A7050027D0B8 /* XboxTabViewController.h */,
+				57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */,
 				57823CA91BC620D10027D0B8 /* LiveAuthManager.m */,
 				57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */,
 				57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */,
@@ -113,7 +118,7 @@
 			);
 			name = XProfileSAK;
 			productName = XProfileSAK;
-			productReference = 57823C8C1BC5E5550027D0B8 /* XProfileSAK.app */;
+			productReference = 57823C8C1BC5E5550027D0B8 /* RishiXbox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57823C9A1BC5E5550027D0B8 /* SecondViewController.m in Sources */,
+				57823CB61BC7A7050027D0B8 /* XboxTabViewController.m in Sources */,
 				57823C941BC5E5550027D0B8 /* AppDelegate.m in Sources */,
 				57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */,
 				57823C971BC5E5550027D0B8 /* FirstViewController.m in Sources */,
@@ -288,7 +294,7 @@
 				INFOPLIST_FILE = XProfileSAK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XProfileSAK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RishiXbox;
 			};
 			name = Debug;
 		};
@@ -299,7 +305,7 @@
 				INFOPLIST_FILE = XProfileSAK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XProfileSAK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RishiXbox;
 			};
 			name = Release;
 		};

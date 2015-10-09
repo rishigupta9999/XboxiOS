@@ -17,6 +17,9 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
 
 @implementation XSTSAuthManager
 
+@synthesize mGamertag = mGamertag;
+@synthesize mXUID = mXUID;
+
 +(void)init
 {
     sInstance = [[XSTSAuthManager alloc] InternalInit];
@@ -108,20 +111,20 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
             
             NSDictionary* xstsResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
             mXToken = [xstsResponse objectForKey:@"Token"];
+            
+            NSDictionary* displayClaims = [xstsResponse objectForKey:@"DisplayClaims"];
+            NSArray* xui = [displayClaims objectForKey:@"xui"];
+            mGamertag = [xui[0] objectForKey:@"gtg"];
+            mXUID = [xui[0] objectForKey:@"xid"];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got XToken %@", mXToken]];
+                [GetAppDelegate() UserLoggedIn];
+            });
+
         }] resume];
         
     }] resume];
-
-
-#if 0
-                wr.Headers["x-xbl-contract-version"] = "0";
-
-                string requestBody = "{\"RelyingParty\":\"http://auth.xboxlive.com\",\"TokenType\" : \"JWT\",\"Properties\":" +
-                                     "{\"AuthMethod\":\"RPS\",\"SiteName\" : \"user.auth.xboxlive.com\",\"RpsTicket\":" +
-                                     "\"d=" + MSAToken + "\"}}";
-                byte[] requestContent = System.Text.Encoding.UTF8.GetBytes(requestBody);
-                byte[] response = await wr.UploadDataTaskAsync(new Uri("https://user.auth.xboxlive.com/user/authenticate"), requestContent);
-#endif
 }
 
 @end
