@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView* mWebView;
 @property (weak, nonatomic) IBOutlet UITextView *mTextView;
+@property (weak, nonatomic) IBOutlet UITextField *mSandbox;
 
 @end
 
@@ -23,6 +24,7 @@
 
 @synthesize mWebView = mWebView;
 @synthesize mTextView = mTextView;
+@synthesize mSandbox = mSandbox;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +46,7 @@
 - (IBAction)LoginButton:(id)sender {
     mWebView.hidden = FALSE;
     
-    [[LiveAuthManager GetInstance] SignInWithWebView:mWebView];
+    [[LiveAuthManager GetInstance] SignInWithWebView:mWebView sandbox:mSandbox.text];
     
     [mWebView setAlpha:0];
 

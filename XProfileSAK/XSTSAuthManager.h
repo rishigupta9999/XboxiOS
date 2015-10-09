@@ -11,6 +11,7 @@
 @interface XSTSAuthManager : NSObject
 {
     NSString* mUToken;
+    NSString* mXToken;
 }
 
 +(void)init;
@@ -18,6 +19,6 @@
 
 -(instancetype)InternalInit;
 
--(void)GetXToken;
+-(void)GetXTokenForSandbox:(NSString*)inSandbox;
 
 @end

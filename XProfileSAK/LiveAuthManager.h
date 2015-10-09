@@ -31,13 +31,14 @@ typedef enum
 
 @property ELoginState mLoginState;
 @property NSString* mMSAToken;
+@property NSString* mSandbox;
 
 +(void)init;
 +(LiveAuthManager*)GetInstance;
 
 -(instancetype)InternalInit;
 
--(void)SignInWithWebView:(UIWebView*)inWebView;
+-(void)SignInWithWebView:(UIWebView*)inWebView sandbox:(NSString*)inSandbox;
 -(BOOL)CheckLoadCompleted:(UIWebView*)inWebView;
 -(void)GetTokensFromLive:(NSString*)inAuthCode;
 

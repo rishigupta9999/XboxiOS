@@ -87,6 +87,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="mSandbox" destination="qiD-Ew-wym" id="Y5c-d2-pX4"/>
                         <outlet property="mTextView" destination="T6V-68-nau" id="eJA-OS-ZXr"/>
                         <outlet property="mWebView" destination="8i3-Ea-agO" id="U4P-o1-sqP"/>
                     </connections>

@@ -14,7 +14,11 @@
 
 const NSString* CLIENT_ID = @"0000000044165E79";
 const NSString* CLIENT_SECRET = @"kCJGy2k0RnR31CHZJU7K0srszoA4hNnK";
-const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=0000000044165E79&scope=Xboxlive.signin%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
+
+// This string has the formatting token ("%@") substituted at runtime.  Since this string is passed to stringWithFormat, we have to escape anything that would be interpreted as a formatting token.  Hence %20 becomes %%20.
+const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=%@&scope=Xboxlive.signin%%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
+
+
 
 const NSString* REDIRECT_URI = @"https://login.live.com/oauth20_desktop.srf";
 
@@ -31,6 +35,7 @@ static LiveAuthManager* sInstance = NULL;
 
 @synthesize mLoginState = mLoginState;
 @synthesize mMSAToken = mMSAToken;
+@synthesize mSandbox = mSandbox;
 
 +(void)init
 {
@@ -55,11 +60,16 @@ static LiveAuthManager* sInstance = NULL;
     return self;
 }
 
--(void)SignInWithWebView:(UIWebView*)inWebView
+-(void)SignInWithWebView:(UIWebView*)inWebView sandbox:(NSString*)inSandbox
 {
-    NSURL* nsUrl = [NSURL URLWithString:(NSString*)OAUTH_SIGNIN_URL];
+    NSString* signInURL = [NSString stringWithString:(NSString*)OAUTH_SIGNIN_URL];
+    signInURL = [NSString stringWithFormat:(NSString*)signInURL, CLIENT_ID];
+    
+    NSURL* nsUrl = [NSURL URLWithString:signInURL];
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     [inWebView loadRequest:request];
+    
+    mSandbox = inSandbox;
 }
 
 -(BOOL)CheckLoadCompleted:(UIWebView*)inWebView
@@ -143,7 +153,7 @@ static LiveAuthManager* sInstance = NULL;
 
         mTokenValid = TRUE;
         
-        [[XSTSAuthManager GetInstance] GetXToken];
+        [[XSTSAuthManager GetInstance] GetXTokenForSandbox:mSandbox];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got RPS ticket %@", mMSAToken]];

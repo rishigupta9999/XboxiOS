@@ -13,6 +13,7 @@
 XSTSAuthManager* sInstance = NULL;
 
 static const NSString* UTOKEN_ENDPOINT = @"https://user.auth.xboxlive.com/user/authenticate";
+static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/authorize";
 
 @implementation XSTSAuthManager
 
@@ -31,7 +32,7 @@ static const NSString* UTOKEN_ENDPOINT = @"https://user.auth.xboxlive.com/user/a
     return self;
 }
 
--(void)GetXToken
+-(void)GetXTokenForSandbox:(NSString*)inSandbox
 {
     NSURL* queryURL = [NSURL URLWithString:(NSString*)UTOKEN_ENDPOINT];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:queryURL];
@@ -75,6 +76,39 @@ static const NSString* UTOKEN_ENDPOINT = @"https://user.auth.xboxlive.com/user/a
         dispatch_async(dispatch_get_main_queue(), ^{
             [GetAppDelegate() AddText:[NSString stringWithFormat:@"Got UToken %@", mUToken]];
         });
+        
+        NSURL* queryURL = [NSURL URLWithString:(NSString*)XTOKEN_ENDPOINT];
+        NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:queryURL];
+    
+        NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:  @"http://xboxlive.com", @"RelyingParty",
+                                                                                @"JWT", @"TokenType",
+                                                                                NULL];
+        
+        NSDictionary* properties = [NSDictionary dictionaryWithObjectsAndKeys:  [NSArray arrayWithObjects:mUToken, NULL], @"UserTokens",
+                                                                                inSandbox, @"SandboxId",
+                                                                                NULL ];
+        
+        [dictionary setObject:properties forKey:@"Properties"];
+        
+        NSData* jsonData = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:NULL];
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+        jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
+        jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:jsonData];
+        [request setHTTPMethod:@"POST"];
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithRequest:request
+                  completionHandler:^(NSData *data,
+                                      NSURLResponse *response,
+                                      NSError *error) {
+            
+            NSDictionary* xstsResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+            mXToken = [xstsResponse objectForKey:@"Token"];
+        }] resume];
         
     }] resume];
 
