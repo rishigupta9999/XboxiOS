@@ -39,5 +39,6 @@ typedef enum
 
 -(void)SignInWithWebView:(UIWebView*)inWebView;
 -(BOOL)CheckLoadCompleted:(UIWebView*)inWebView;
+-(void)GetTokensFromLive:(NSString*)inAuthCode;
 
 @end

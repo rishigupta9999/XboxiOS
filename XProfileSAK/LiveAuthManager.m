@@ -13,6 +13,9 @@
 const NSString* CLIENT_ID = @"000000004812FA70";
 const NSString* CLIENT_SECRET = @"WY9o8+UrYvaDhNf0Zj2J5tOLo6KRU/Cg";
 const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=000000004812FA70&scope=Xboxlive.signin%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
+
+const NSString* REDIRECT_URI = @"https://login.live.com/oauth20_desktop.srf";
+
 const NSString* OAUTH_SIGNOUT_URL = @"https://login.live.com/oauth20_logout.srf";
 const NSString* OAUTH_GETTOKEN_URL = @"https://login.live.com/oauth20_token.srf";
       NSString* OAUTH_GETTOKEN_CONTENT = @"client_id=%@&redirect_uri=https://login.live.com/oauth20_desktop.srf&client_secret=%@&grant_type=authorization_code";
@@ -62,15 +65,82 @@ static LiveAuthManager* sInstance = NULL;
     
     NSArray* pathComponents = [url pathComponents];
     
+    NSLog(@"URL = %@, Query = %@", url, url.query);
+    
+    NSString* authCode = NULL;
+    
     for (NSString* curString in pathComponents)
     {
         if ([curString caseInsensitiveCompare:(NSString*)OAUTH_SIGNIN_COMPLETION_PAGE] == NSOrderedSame)
         {
-            return TRUE;
+            mLoginState = ELoginStateSignedIn;
+            
+            NSString* query = url.query;
+            NSArray* args = [query componentsSeparatedByString:@"&"];
+            
+            for (NSString* curArg in args)
+            {
+                NSArray* pair = [curArg componentsSeparatedByString:@"="];
+                
+                if ([pair[0] caseInsensitiveCompare:@"code"] == NSOrderedSame)
+                {
+                    authCode = pair[1];
+                }
+            }
+            
+            break;
         }
     }
     
+    if (authCode != NULL)
+    {
+        [self GetTokensFromLive:authCode];
+        mLoginState = ELoginStateSignedIn;
+
+        return TRUE;
+    }
+    
     return FALSE;
+}
+
+-(void)GetTokensFromLive:(NSString*)inAuthCode
+{
+    mTokenValid = FALSE;
+    mMSAToken = @"";
+    mRefreshToken = @"";
+    
+    NSURLComponents* components = [NSURLComponents componentsWithString:(NSString*)OAUTH_GETTOKEN_URL];
+    
+    NSURLQueryItem* clientId = [NSURLQueryItem queryItemWithName:@"client_id" value:(NSString*)CLIENT_ID];
+    NSURLQueryItem* code = [NSURLQueryItem queryItemWithName:@"code" value:inAuthCode];
+    NSURLQueryItem* redirectURI = [NSURLQueryItem queryItemWithName:@"redirect_uri" value:(NSString*)REDIRECT_URI];
+    NSURLQueryItem* clientSecret = [NSURLQueryItem queryItemWithName:@"client_secret" value:(NSString*)CLIENT_SECRET];
+    NSURLQueryItem* grantType = [NSURLQueryItem queryItemWithName:@"grant_type" value:@"authorization_code"];
+    
+    components.queryItems = @[clientId, redirectURI, code, clientSecret, grantType];
+    
+    NSURL* queryURL = components.URL;
+    NSLog(@"Query url %@", queryURL);
+
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:queryURL];
+    
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request
+              completionHandler:^(NSData *data,
+                                  NSURLResponse *response,
+                                  NSError *error) {
+                  
+        NSDictionary* dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        
+        mMSAToken = [dictionary objectForKey:@"access_token"];
+        
+        NSString* expiryDuration = [dictionary objectForKey:@"expires_in"];
+        mTokenExpiryTime = [NSDate dateWithTimeIntervalSinceNow:[expiryDuration floatValue]];
+
+        mTokenValid = TRUE;
+      }] resume];
 }
 
 @end
