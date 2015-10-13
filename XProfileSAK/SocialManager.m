@@ -53,7 +53,8 @@ static const NSString* PROFILE_URL = @"https://profile.xboxlive.com/users/batch/
         [call IssueAsync:^(NSData *data,
                                       NSURLResponse *response,
                                       NSError *error) {
-            NSLog(@"Foo");
+                NSDictionary *jsonString = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                NSLog(@"%@", jsonString);
             }];
     }
 }

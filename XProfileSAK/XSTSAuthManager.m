@@ -120,7 +120,7 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
             NSArray* xui = [displayClaims objectForKey:@"xui"];
             mGamertag = [xui[0] objectForKey:@"gtg"];
             mXUID = [xui[0] objectForKey:@"xid"];
-            mUserHash = [xui[0] objectForKey:@"usr"];
+            mUserHash = [xui[0] objectForKey:@"uhs"];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [GetAppDelegate() AddText:@"Got XToken"];
