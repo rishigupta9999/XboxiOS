@@ -114,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57823C8B1BC5E5550027D0B8 /* XProfileSAK */ = {
+		57823C8B1BC5E5550027D0B8 /* XboxiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57823CA61BC5E5550027D0B8 /* Build configuration list for PBXNativeTarget "XProfileSAK" */;
+			buildConfigurationList = 57823CA61BC5E5550027D0B8 /* Build configuration list for PBXNativeTarget "XboxiOS" */;
 			buildPhases = (
 				57823C881BC5E5550027D0B8 /* Sources */,
 				57823C891BC5E5550027D0B8 /* Frameworks */,
@@ -126,7 +126,7 @@
 			);
 			dependencies = (
 			);
-			name = XProfileSAK;
+			name = XboxiOS;
 			productName = XProfileSAK;
 			productReference = 57823C8C1BC5E5550027D0B8 /* RishiXbox.app */;
 			productType = "com.apple.product-type.application";
@@ -145,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 57823C871BC5E5550027D0B8 /* Build configuration list for PBXProject "XProfileSAK" */;
+			buildConfigurationList = 57823C871BC5E5550027D0B8 /* Build configuration list for PBXProject "XboxiOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -158,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57823C8B1BC5E5550027D0B8 /* XProfileSAK */,
+				57823C8B1BC5E5550027D0B8 /* XboxiOS */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XProfileSAK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XProfileSAK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XboxiOS;
 				PRODUCT_NAME = RishiXbox;
 			};
 			name = Debug;
@@ -316,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XProfileSAK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XProfileSAK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XboxiOS;
 				PRODUCT_NAME = RishiXbox;
 			};
 			name = Release;
@@ -324,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57823C871BC5E5550027D0B8 /* Build configuration list for PBXProject "XProfileSAK" */ = {
+		57823C871BC5E5550027D0B8 /* Build configuration list for PBXProject "XboxiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57823CA41BC5E5550027D0B8 /* Debug */,
@@ -333,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57823CA61BC5E5550027D0B8 /* Build configuration list for PBXNativeTarget "XProfileSAK" */ = {
+		57823CA61BC5E5550027D0B8 /* Build configuration list for PBXNativeTarget "XboxiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57823CA71BC5E5550027D0B8 /* Debug */,

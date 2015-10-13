@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:XProfileSAK.xcodeproj">
+      location = "self:/Users/rishig/Microsoft/CreateWeek/XProfileSAK/XboxiOS.xcodeproj">
    </FileRef>
 </Workspace>
