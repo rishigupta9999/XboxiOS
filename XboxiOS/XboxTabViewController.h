@@ -1,6 +1,6 @@
 //
 //  XboxTabViewController.h
-//  XProfileSAK
+//  XboxiOS
 //
 //  Created by Rishi Gupta on 10/9/15.
 //  Copyright © 2015 Neon Games. All rights reserved.
