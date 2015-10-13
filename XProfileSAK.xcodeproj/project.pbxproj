@@ -17,6 +17,8 @@
 		57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CA91BC620D10027D0B8 /* LiveAuthManager.m */; settings = {ASSET_TAGS = (); }; };
 		57823CB21BC752D00027D0B8 /* XSTSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */; settings = {ASSET_TAGS = (); }; };
 		57823CB61BC7A7050027D0B8 /* XboxTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */; settings = {ASSET_TAGS = (); }; };
+		57A968B71BC86B7D0021EF84 /* SocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A968B61BC86B7D0021EF84 /* SocialManager.m */; settings = {ASSET_TAGS = (); }; };
+		57A968BA1BC86FA60021EF84 /* XboxLiveCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A968B91BC86FA60021EF84 /* XboxLiveCall.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTSAuthManager.h; sourceTree = "<group>"; };
 		57823CB41BC7A7050027D0B8 /* XboxTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxTabViewController.h; sourceTree = "<group>"; };
 		57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxTabViewController.m; sourceTree = "<group>"; };
+		57A968B51BC86B7D0021EF84 /* SocialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialManager.h; sourceTree = "<group>"; };
+		57A968B61BC86B7D0021EF84 /* SocialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialManager.m; sourceTree = "<group>"; };
+		57A968B81BC86FA60021EF84 /* XboxLiveCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxLiveCall.h; sourceTree = "<group>"; };
+		57A968B91BC86FA60021EF84 /* XboxLiveCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxLiveCall.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */,
 				57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */,
 				57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */,
+				57A968B51BC86B7D0021EF84 /* SocialManager.h */,
+				57A968B61BC86B7D0021EF84 /* SocialManager.m */,
+				57A968B81BC86FA60021EF84 /* XboxLiveCall.h */,
+				57A968B91BC86FA60021EF84 /* XboxLiveCall.m */,
 				57823C9E1BC5E5550027D0B8 /* Assets.xcassets */,
 				57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */,
 				57823CA31BC5E5550027D0B8 /* Info.plist */,
@@ -171,6 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A968B71BC86B7D0021EF84 /* SocialManager.m in Sources */,
+				57A968BA1BC86FA60021EF84 /* XboxLiveCall.m in Sources */,
 				57823C9A1BC5E5550027D0B8 /* SecondViewController.m in Sources */,
 				57823CB61BC7A7050027D0B8 /* XboxTabViewController.m in Sources */,
 				57823C941BC5E5550027D0B8 /* AppDelegate.m in Sources */,

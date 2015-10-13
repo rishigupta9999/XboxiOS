@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LiveAuthManager.h"
 #import "XSTSAuthManager.h"
+#import "SocialManager.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
     
     [LiveAuthManager init];
     [XSTSAuthManager init];
+    [SocialManager init];
     
     mTextViewString = [[NSString alloc] init];
     return YES;

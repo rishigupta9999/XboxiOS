@@ -11,11 +11,13 @@
 @interface XSTSAuthManager : NSObject
 {
     NSString* mUToken;
-    NSString* mXToken;
 }
 
 @property NSString* mGamertag;
 @property NSString* mXUID;
+@property NSString* mUserHash;
+@property NSString* mXToken;
+@property BOOL mLoggedIn;
 
 +(void)init;
 +(XSTSAuthManager*)GetInstance;

@@ -19,6 +19,9 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
 
 @synthesize mGamertag = mGamertag;
 @synthesize mXUID = mXUID;
+@synthesize mLoggedIn = mLoggedIn;
+@synthesize mUserHash = mUserHash;
+@synthesize mXToken = mXToken;
 
 +(void)init
 {
@@ -32,6 +35,7 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
 
 -(instancetype)InternalInit
 {
+    mLoggedIn = NULL;
     return self;
 }
 
@@ -116,6 +120,7 @@ static const NSString* XTOKEN_ENDPOINT = @"https://xsts.auth.xboxlive.com/xsts/a
             NSArray* xui = [displayClaims objectForKey:@"xui"];
             mGamertag = [xui[0] objectForKey:@"gtg"];
             mXUID = [xui[0] objectForKey:@"xid"];
+            mUserHash = [xui[0] objectForKey:@"usr"];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [GetAppDelegate() AddText:@"Got XToken"];

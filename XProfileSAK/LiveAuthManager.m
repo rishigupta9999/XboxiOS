@@ -12,8 +12,8 @@
 #import "AppDelegate.h"
 #import "XSTSAuthManager.h"
 
-const NSString* CLIENT_ID = @"0000000044165E79";
-const NSString* CLIENT_SECRET = @"kCJGy2k0RnR31CHZJU7K0srszoA4hNnK";
+const NSString* CLIENT_ID = @"000000004812FA70";
+const NSString* CLIENT_SECRET = @"WY9o8+UrYvaDhNf0Zj2J5tOLo6KRU/Cg";
 
 // This string has the formatting token ("%@") substituted at runtime.  Since this string is passed to stringWithFormat, we have to escape anything that would be interpreted as a formatting token.  Hence %20 becomes %%20.
 const NSString* OAUTH_SIGNIN_URL = @"https://login.live.com/oauth20_authorize.srf?client_id=%@&scope=Xboxlive.signin%%20Xboxlive.offline_access&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf";
