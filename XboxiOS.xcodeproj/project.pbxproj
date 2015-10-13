@@ -7,44 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57823C911BC5E5550027D0B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823C901BC5E5550027D0B8 /* main.m */; };
-		57823C941BC5E5550027D0B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823C931BC5E5550027D0B8 /* AppDelegate.m */; };
-		57823C971BC5E5550027D0B8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823C961BC5E5550027D0B8 /* FirstViewController.m */; };
-		57823C9A1BC5E5550027D0B8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823C991BC5E5550027D0B8 /* SecondViewController.m */; };
-		57823C9D1BC5E5550027D0B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57823C9B1BC5E5550027D0B8 /* Main.storyboard */; };
-		57823C9F1BC5E5550027D0B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57823C9E1BC5E5550027D0B8 /* Assets.xcassets */; };
-		57823CA21BC5E5550027D0B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */; };
-		57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CA91BC620D10027D0B8 /* LiveAuthManager.m */; settings = {ASSET_TAGS = (); }; };
-		57823CB21BC752D00027D0B8 /* XSTSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */; settings = {ASSET_TAGS = (); }; };
-		57823CB61BC7A7050027D0B8 /* XboxTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */; settings = {ASSET_TAGS = (); }; };
-		57A968B71BC86B7D0021EF84 /* SocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A968B61BC86B7D0021EF84 /* SocialManager.m */; settings = {ASSET_TAGS = (); }; };
-		57A968BA1BC86FA60021EF84 /* XboxLiveCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A968B91BC86FA60021EF84 /* XboxLiveCall.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3C61BCDBD5E00C437FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3B01BCDBD5E00C437FD /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3C71BCDBD5E00C437FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A0A3B11BCDBD5E00C437FD /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		57A0A3C81BCDBD5E00C437FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A0A3B21BCDBD5E00C437FD /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		57A0A3C91BCDBD5E00C437FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A0A3B41BCDBD5E00C437FD /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		57A0A3CA1BCDBD5E00C437FD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3B71BCDBD5E00C437FD /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3CC1BCDBD5E00C437FD /* LiveAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3BA1BCDBD5E00C437FD /* LiveAuthManager.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3CD1BCDBD5E00C437FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3BB1BCDBD5E00C437FD /* main.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3CE1BCDBD5E00C437FD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3BD1BCDBD5E00C437FD /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3CF1BCDBD5E00C437FD /* SocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3BF1BCDBD5E00C437FD /* SocialManager.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3D01BCDBD5E00C437FD /* XboxLiveCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3C11BCDBD5E00C437FD /* XboxLiveCall.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3D11BCDBD5E00C437FD /* XboxTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3C31BCDBD5E00C437FD /* XboxTabViewController.m */; settings = {ASSET_TAGS = (); }; };
+		57A0A3D21BCDBD5E00C437FD /* XSTSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A0A3C51BCDBD5E00C437FD /* XSTSAuthManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57823C8C1BC5E5550027D0B8 /* RishiXbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RishiXbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		57823C901BC5E5550027D0B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		57823C921BC5E5550027D0B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		57823C931BC5E5550027D0B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		57823C951BC5E5550027D0B8 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		57823C961BC5E5550027D0B8 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		57823C981BC5E5550027D0B8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		57823C991BC5E5550027D0B8 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		57823C9C1BC5E5550027D0B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57823C9E1BC5E5550027D0B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		57823CA11BC5E5550027D0B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		57823CA31BC5E5550027D0B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57823CA91BC620D10027D0B8 /* LiveAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthManager.m; sourceTree = "<group>"; };
-		57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveAuthManager.h; sourceTree = "<group>"; };
+		57823C8C1BC5E5550027D0B8 /* XboxiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XboxiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57823CB01BC74B200027D0B8 /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.h; sourceTree = "<group>"; };
-		57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSTSAuthManager.m; sourceTree = "<group>"; };
-		57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTSAuthManager.h; sourceTree = "<group>"; };
-		57823CB41BC7A7050027D0B8 /* XboxTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxTabViewController.h; sourceTree = "<group>"; };
-		57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxTabViewController.m; sourceTree = "<group>"; };
-		57A968B51BC86B7D0021EF84 /* SocialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialManager.h; sourceTree = "<group>"; };
-		57A968B61BC86B7D0021EF84 /* SocialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialManager.m; sourceTree = "<group>"; };
-		57A968B81BC86FA60021EF84 /* XboxLiveCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxLiveCall.h; sourceTree = "<group>"; };
-		57A968B91BC86FA60021EF84 /* XboxLiveCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxLiveCall.m; sourceTree = "<group>"; };
+		57A0A3AF1BCDBD5E00C437FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		57A0A3B01BCDBD5E00C437FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		57A0A3B11BCDBD5E00C437FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57A0A3B31BCDBD5E00C437FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57A0A3B51BCDBD5E00C437FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57A0A3B61BCDBD5E00C437FD /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		57A0A3B71BCDBD5E00C437FD /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		57A0A3B81BCDBD5E00C437FD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A0A3B91BCDBD5E00C437FD /* LiveAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthManager.h; sourceTree = "<group>"; };
+		57A0A3BA1BCDBD5E00C437FD /* LiveAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthManager.m; sourceTree = "<group>"; };
+		57A0A3BB1BCDBD5E00C437FD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		57A0A3BC1BCDBD5E00C437FD /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		57A0A3BD1BCDBD5E00C437FD /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		57A0A3BE1BCDBD5E00C437FD /* SocialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialManager.h; sourceTree = "<group>"; };
+		57A0A3BF1BCDBD5E00C437FD /* SocialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialManager.m; sourceTree = "<group>"; };
+		57A0A3C01BCDBD5E00C437FD /* XboxLiveCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxLiveCall.h; sourceTree = "<group>"; };
+		57A0A3C11BCDBD5E00C437FD /* XboxLiveCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxLiveCall.m; sourceTree = "<group>"; };
+		57A0A3C21BCDBD5E00C437FD /* XboxTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XboxTabViewController.h; sourceTree = "<group>"; };
+		57A0A3C31BCDBD5E00C437FD /* XboxTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XboxTabViewController.m; sourceTree = "<group>"; };
+		57A0A3C41BCDBD5E00C437FD /* XSTSAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSTSAuthManager.h; sourceTree = "<group>"; };
+		57A0A3C51BCDBD5E00C437FD /* XSTSAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSTSAuthManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				57823CB01BC74B200027D0B8 /* pch.h */,
-				57823C8E1BC5E5550027D0B8 /* XProfileSAK */,
+				57A0A3AE1BCDBD5E00C437FD /* XboxiOS */,
 				57823C8D1BC5E5550027D0B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,45 +70,37 @@
 		57823C8D1BC5E5550027D0B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57823C8C1BC5E5550027D0B8 /* RishiXbox.app */,
+				57823C8C1BC5E5550027D0B8 /* XboxiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57823C8E1BC5E5550027D0B8 /* XProfileSAK */ = {
+		57A0A3AE1BCDBD5E00C437FD /* XboxiOS */ = {
 			isa = PBXGroup;
 			children = (
-				57823C921BC5E5550027D0B8 /* AppDelegate.h */,
-				57823C931BC5E5550027D0B8 /* AppDelegate.m */,
-				57823C951BC5E5550027D0B8 /* FirstViewController.h */,
-				57823C961BC5E5550027D0B8 /* FirstViewController.m */,
-				57823C981BC5E5550027D0B8 /* SecondViewController.h */,
-				57823C991BC5E5550027D0B8 /* SecondViewController.m */,
-				57823C9B1BC5E5550027D0B8 /* Main.storyboard */,
-				57823CB41BC7A7050027D0B8 /* XboxTabViewController.h */,
-				57823CB51BC7A7050027D0B8 /* XboxTabViewController.m */,
-				57823CA91BC620D10027D0B8 /* LiveAuthManager.m */,
-				57823CAB1BC620F20027D0B8 /* LiveAuthManager.h */,
-				57823CB31BC752E90027D0B8 /* XSTSAuthManager.h */,
-				57823CB11BC752D00027D0B8 /* XSTSAuthManager.m */,
-				57A968B51BC86B7D0021EF84 /* SocialManager.h */,
-				57A968B61BC86B7D0021EF84 /* SocialManager.m */,
-				57A968B81BC86FA60021EF84 /* XboxLiveCall.h */,
-				57A968B91BC86FA60021EF84 /* XboxLiveCall.m */,
-				57823C9E1BC5E5550027D0B8 /* Assets.xcassets */,
-				57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */,
-				57823CA31BC5E5550027D0B8 /* Info.plist */,
-				57823C8F1BC5E5550027D0B8 /* Supporting Files */,
+				57A0A3AF1BCDBD5E00C437FD /* AppDelegate.h */,
+				57A0A3B01BCDBD5E00C437FD /* AppDelegate.m */,
+				57A0A3B11BCDBD5E00C437FD /* Assets.xcassets */,
+				57A0A3B21BCDBD5E00C437FD /* LaunchScreen.storyboard */,
+				57A0A3B41BCDBD5E00C437FD /* Main.storyboard */,
+				57A0A3B61BCDBD5E00C437FD /* FirstViewController.h */,
+				57A0A3B71BCDBD5E00C437FD /* FirstViewController.m */,
+				57A0A3B81BCDBD5E00C437FD /* Info.plist */,
+				57A0A3B91BCDBD5E00C437FD /* LiveAuthManager.h */,
+				57A0A3BA1BCDBD5E00C437FD /* LiveAuthManager.m */,
+				57A0A3BB1BCDBD5E00C437FD /* main.m */,
+				57A0A3BC1BCDBD5E00C437FD /* SecondViewController.h */,
+				57A0A3BD1BCDBD5E00C437FD /* SecondViewController.m */,
+				57A0A3BE1BCDBD5E00C437FD /* SocialManager.h */,
+				57A0A3BF1BCDBD5E00C437FD /* SocialManager.m */,
+				57A0A3C01BCDBD5E00C437FD /* XboxLiveCall.h */,
+				57A0A3C11BCDBD5E00C437FD /* XboxLiveCall.m */,
+				57A0A3C21BCDBD5E00C437FD /* XboxTabViewController.h */,
+				57A0A3C31BCDBD5E00C437FD /* XboxTabViewController.m */,
+				57A0A3C41BCDBD5E00C437FD /* XSTSAuthManager.h */,
+				57A0A3C51BCDBD5E00C437FD /* XSTSAuthManager.m */,
 			);
-			path = XProfileSAK;
-			sourceTree = "<group>";
-		};
-		57823C8F1BC5E5550027D0B8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				57823C901BC5E5550027D0B8 /* main.m */,
-			);
-			name = "Supporting Files";
+			path = XboxiOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +120,7 @@
 			);
 			name = XboxiOS;
 			productName = XProfileSAK;
-			productReference = 57823C8C1BC5E5550027D0B8 /* RishiXbox.app */;
+			productReference = 57823C8C1BC5E5550027D0B8 /* XboxiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,9 +160,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57823CA21BC5E5550027D0B8 /* LaunchScreen.storyboard in Resources */,
-				57823C9F1BC5E5550027D0B8 /* Assets.xcassets in Resources */,
-				57823C9D1BC5E5550027D0B8 /* Main.storyboard in Resources */,
+				57A0A3C71BCDBD5E00C437FD /* Assets.xcassets in Resources */,
+				57A0A3C91BCDBD5E00C437FD /* Main.storyboard in Resources */,
+				57A0A3C81BCDBD5E00C437FD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,35 +173,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A968B71BC86B7D0021EF84 /* SocialManager.m in Sources */,
-				57A968BA1BC86FA60021EF84 /* XboxLiveCall.m in Sources */,
-				57823C9A1BC5E5550027D0B8 /* SecondViewController.m in Sources */,
-				57823CB61BC7A7050027D0B8 /* XboxTabViewController.m in Sources */,
-				57823C941BC5E5550027D0B8 /* AppDelegate.m in Sources */,
-				57823CAA1BC620D10027D0B8 /* LiveAuthManager.m in Sources */,
-				57823C971BC5E5550027D0B8 /* FirstViewController.m in Sources */,
-				57823C911BC5E5550027D0B8 /* main.m in Sources */,
-				57823CB21BC752D00027D0B8 /* XSTSAuthManager.m in Sources */,
+				57A0A3CD1BCDBD5E00C437FD /* main.m in Sources */,
+				57A0A3CF1BCDBD5E00C437FD /* SocialManager.m in Sources */,
+				57A0A3CA1BCDBD5E00C437FD /* FirstViewController.m in Sources */,
+				57A0A3CC1BCDBD5E00C437FD /* LiveAuthManager.m in Sources */,
+				57A0A3D01BCDBD5E00C437FD /* XboxLiveCall.m in Sources */,
+				57A0A3D11BCDBD5E00C437FD /* XboxTabViewController.m in Sources */,
+				57A0A3C61BCDBD5E00C437FD /* AppDelegate.m in Sources */,
+				57A0A3CE1BCDBD5E00C437FD /* SecondViewController.m in Sources */,
+				57A0A3D21BCDBD5E00C437FD /* XSTSAuthManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		57823C9B1BC5E5550027D0B8 /* Main.storyboard */ = {
+		57A0A3B21BCDBD5E00C437FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				57823C9C1BC5E5550027D0B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		57823CA01BC5E5550027D0B8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57823CA11BC5E5550027D0B8 /* Base */,
+				57A0A3B31BCDBD5E00C437FD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		57A0A3B41BCDBD5E00C437FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57A0A3B51BCDBD5E00C437FD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -303,10 +295,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = XProfileSAK/Info.plist;
+				INFOPLIST_FILE = XboxiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XboxiOS;
-				PRODUCT_NAME = RishiXbox;
+				PRODUCT_NAME = XboxiOS;
 			};
 			name = Debug;
 		};
@@ -314,10 +306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = XProfileSAK/Info.plist;
+				INFOPLIST_FILE = XboxiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neongames.XboxiOS;
-				PRODUCT_NAME = RishiXbox;
+				PRODUCT_NAME = XboxiOS;
 			};
 			name = Release;
 		};
